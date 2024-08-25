@@ -1,0 +1,15 @@
+<h2>RxJS 1</h2>
+<p>Ze strumienia emitujące wartości 1..20 stwórz strumienie emitujące:</p>
+<ul>
+  <li>tylko liczby parzyste (operator filter)</li>
+  <li>tylko pierwszych 5 liczb (operator take)</li>
+  <li>tylko 8 (operator find)</li>
+  <li>wartości "Liczba 1", "Liczba 2", "Liczba 3" itd (operator map)</li>
+</ul>
+<h3>Wyniki:</h3>
+<section>
+  <p>Tylko parzyste: {{ onlyEven$ | toArray | async }}</p>
+  <p>Tylko pierwszych 5 liczb: {{ firstFive$ | toArray | async }}</p>
+  <p>Tylko 8: {{ onlyValue8$ | toArray | async }}</p>
+  <p>Mapowane: {{ mappedToStringX$ | toArray | async }}</p>
+</section>

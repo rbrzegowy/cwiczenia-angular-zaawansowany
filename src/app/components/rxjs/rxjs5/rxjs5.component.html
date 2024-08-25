@@ -1,0 +1,22 @@
+<h2>RxJS 5 - wyszukiwarka</h2>
+<p>
+  Zapisz się na zdarzenie input pola tekstowego (roboczo - jest to
+  wyszukiwarka). Emituj wpisane wartości gdy użytkownik przerwał wpisywanie na
+  min. 300ms i wartość nie jest pusta. <br />
+</p>
+<p>
+  Bonus: Rozbuduj kod o zapamiętywanie wyszukiwań usera (historia wyszukiwania).
+</p>
+<p>
+  Bonus 2: Zamockuj autozapis. W trakcie zapisu pokaż komunikat "Zapisywanie",
+  następnie przez 2s "Zapisano", następnie datę/czas ostatniego zapisu.
+</p>
+<h3>Wyszukiwarka:</h3>
+<p>
+  Wpisz szukany tekst:
+  <input type="text" #searchBox (input)="onSearchBoxChange(searchBox.value)" />
+</p>
+<h3>Wynik</h3>
+<section>
+  <p>Ostatnie wyszukania: {{ searchData$ | toArray | async }}</p>
+</section>

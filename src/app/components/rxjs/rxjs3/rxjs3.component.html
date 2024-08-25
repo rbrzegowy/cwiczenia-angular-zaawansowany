@@ -1,0 +1,16 @@
+<h2>RxJS 3 - fromEvent</h2>
+<p>
+  1. Koordynaty myszy po kliknięciu <br />
+  Wyemituj koordynaty myszy po kliknięciu w dowolne miejsce na dokumencie.
+  Wykorzystaj fromEvent() na document.click.
+</p>
+<p>
+  2. Koordynaty myszy w interwale <br />
+  Wyemituj koordynaty kursora nie częściej niż co 1s (jeśli koordynaty się
+  zmieniły).
+</p>
+<p>Bonus: Wyemituj koordynaty jak user nie rusza myszą od 2s i x>500</p>
+<h3>Wynik:</h3>
+<section>
+  <p>Koordynaty: {{ pointerCoords$ | toArray | async }}</p>
+</section>
