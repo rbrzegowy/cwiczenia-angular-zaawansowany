@@ -1,0 +1,19 @@
+<h2>Routing 1 - loader</h2>
+<p>
+  1. Stwórz route /dlugie ladowanie - kieruje do komponentu LongLoadingComponent
+  (lazy load)
+</p>
+<p>
+  2. Stwórz dla route resolver który odczeka 4s (symulujemy ładowanie danych).
+</p>
+<p>
+  3. Zaimplementuj loader. Forma dowolna - pasek oczekiwania lub np. komunikat
+  "trwa ładowanie" Loader powinien się odpalać przy starcie nawigacji -
+  zdarzenie NavigationStart oraz kończyć na zdarzeniu NavigationEnd i/lub
+  NavigationCancel.
+</p>
+<p>Bonus: Nie pokazuje loadera gdy ładowanie trwa mniej niż 1s</p>
+<p>
+  Bonus 2: Dodaj automatyczne zamykanie loader po 30s (aplikacja prawdopodobnie
+  wisi)
+</p>
