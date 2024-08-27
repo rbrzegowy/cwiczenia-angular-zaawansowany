@@ -7,10 +7,9 @@
   2. Stwórz dla route resolver który odczeka 4s (symulujemy ładowanie danych).
 </p>
 <p>
-  3. Zaimplementuj loader. Forma dowolna - pasek oczekiwania lub np. komunikat
-  "trwa ładowanie" Loader powinien się odpalać przy starcie nawigacji -
-  zdarzenie NavigationStart oraz kończyć na zdarzeniu NavigationEnd i/lub
-  NavigationCancel.
+  3. Przy starcie nawigacji (zdarzenie NavigationStart) pokaż komponent
+  LoaderComponet w prawym górnym rogu aplikacji. Ukryj komponent po zakończeniu
+  nawigacji (zdarzenie NavigationEnd i/lub NavigationCancel).
 </p>
 <p>Bonus: Nie pokazuje loadera gdy ładowanie trwa mniej niż 1s</p>
 <p>
