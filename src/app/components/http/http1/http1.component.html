@@ -1,0 +1,13 @@
+<h2>Http - interceptor</h2>
+<p>
+  Stwórz interceptor, który będzie realizował cache postów z jsonPlaceholder.
+</p>
+<p>Do pobrania danych użyj metody jsonPlaceholderApi.getPost(id: number)</p>
+<p>
+  Bonus: Interceptor powinien przechowywać w cache posty, które zostały pobrane
+  w ciągu ostatnich 30 sekund.
+</p>
+
+<h2>Wynik</h2>
+<p><button (click)="onGetPostClick()">Pobierz post</button></p>
+<pre>Pobrany post: {{ post | async | json }}</pre>
