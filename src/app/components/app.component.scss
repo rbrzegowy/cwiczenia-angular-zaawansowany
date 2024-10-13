@@ -7,6 +7,8 @@ header {
   color: #fff;
   padding: 20px;
   font-size: 1.25rem;
+  box-shadow: 0px 4px 7px 1px rgb(0 0 0 / 20%);
+  position: relative;
 }
 
 nav {
@@ -15,7 +17,9 @@ nav {
   gap: 20px;
   background-color: #fff;
   color: #000;
-  padding: 15px;
+  padding: 22px;
+  font-size: 14px;
+  box-shadow: 0px 4px 7px 1px rgb(0 0 0 / 20%);
 }
 
 main {
