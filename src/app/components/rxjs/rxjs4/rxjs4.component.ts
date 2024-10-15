@@ -13,4 +13,11 @@ export class Rxjs4Component {
 
   // zamień of na właściwe rozwiązanie
   votes$ = of(null)
+
+  // BONUS: Zamien głosy na losowe
+
+  // BONUS2:
+  // wyświetl najpierw: "Trwa głosowanie", następnie wyniki,
+  // następnie(po 2s),"Głosowanie zakończone"
+  // concat(obs1$, obs2$, obs3$)
 }

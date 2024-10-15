@@ -8,6 +8,7 @@ import { Rxjs5Component } from './components/rxjs/rxjs5/rxjs5.component'
 import { Routing1Component } from './components/routing/routing1/routing1.component'
 import { Forms1Component } from './components/forms/forms1/forms1.component'
 import { Http1Component } from './components/http/http1/http1.component'
+import { Routing2Component } from './components/routing/routing2/routing2.component'
 
 export const routes: Routes = [
   { path: '', component: HomeComponent },
@@ -17,6 +18,7 @@ export const routes: Routes = [
   { path: 'rxjs4', component: Rxjs4Component },
   { path: 'rxjs5', component: Rxjs5Component },
   { path: 'routing1', component: Routing1Component },
+  { path: 'routing2', component: Routing2Component },
   { path: 'forms1', component: Forms1Component },
   { path: 'http1', component: Http1Component },
 ]
