@@ -12,7 +12,7 @@ import { of } from 'rxjs'
 export class Rxjs4Component {
 
   // zamień of na właściwe rozwiązanie
-  votes$ = of(null)
+  result$ = of(null)
 
   // BONUS: Zamien głosy na losowe
 
