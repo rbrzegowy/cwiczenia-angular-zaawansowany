@@ -12,5 +12,5 @@
 <p>Bonus: Wyemituj koordynaty jak user nie rusza myszą od 2s i x>500</p>
 <h3>Wynik:</h3>
 <section>
-  <p>Koordynaty: {{ pointerCoords$ | toArray | async }}</p>
+  <p>Koordynaty: {{ pointerCoords$ | toArray : 10 | async }}</p>
 </section>
