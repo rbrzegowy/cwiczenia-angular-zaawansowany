@@ -2,14 +2,26 @@
 <p>
   1. Koordynaty myszy po kliknięciu <br />
   Wyemituj koordynaty myszy po kliknięciu w dowolne miejsce na dokumencie.
-  Wykorzystaj fromEvent() na document.click.
+</p>
+<p>
+  Wykorzystaj fromEvent() na document.click (emitowany typ zdarzenia:
+  PointerEvent)
 </p>
 <p>
   2. Koordynaty myszy w interwale <br />
-  Wyemituj koordynaty kursora nie częściej niż co 1s (jeśli koordynaty się
-  zmieniły).
+  Wyemituj koordynaty kursora nie częściej niż co 1s (nie obsługujemy przypadku
+  gdy koordynaty się nie zmieniły).
 </p>
-<p>Bonus: Wyemituj koordynaty jak user nie rusza myszą od 2s i x>500</p>
+<p>Wykorzystaj operator sampleTime</p>
+<p>
+  <b>Bonus:</b> Wyemituj koordynaty tylko jeśli user nie rusza myszą od min. 2s
+  i x>500
+</p>
+<p>Wykorzystaj filter, debounceTime</p>
+<p>
+  <b>Bonus2:</b> Zastanów się - jak zmienić (2) by emisja następowała również
+  wtedy gdy kursor nie zmienia położenia?
+</p>
 <h3>Wynik:</h3>
 <section>
   <p>Koordynaty: {{ pointerCoords$ | toArray : 10 | async }}</p>
