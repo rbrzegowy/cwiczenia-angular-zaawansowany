@@ -15,13 +15,9 @@ export class Http1Component {
   private api = inject(JsonPlaceholderApiService)
 
   protected post!: Observable<any>
-  ngOnInit(): void {
-    //Called after the constructor, initializing input properties, and the first call to ngOnChanges.
-    //Add 'implements OnInit' to the class.
 
-  }
   onGetPostClick() {
-    const randomPostNumber = Math.floor(Math.random() * 10)
+    const randomPostNumber = Math.floor(Math.random() * 9) + 1
     this.post = this.api.getPost(randomPostNumber)
   }
 }
