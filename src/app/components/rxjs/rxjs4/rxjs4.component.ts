@@ -3,11 +3,10 @@ import { Component } from '@angular/core'
 import { of } from 'rxjs'
 
 @Component({
-  selector: 'app-rxjs4',
-  standalone: true,
-  imports: [AsyncPipe],
-  templateUrl: './rxjs4.component.html',
-  styleUrl: './rxjs4.component.scss'
+    selector: 'app-rxjs4',
+    imports: [AsyncPipe],
+    templateUrl: './rxjs4.component.html',
+    styleUrl: './rxjs4.component.scss'
 })
 export class Rxjs4Component {
 

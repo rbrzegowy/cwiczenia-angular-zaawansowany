@@ -4,11 +4,10 @@ import { Observable } from 'rxjs'
 import { AsyncPipe, JsonPipe } from '@angular/common'
 
 @Component({
-  selector: 'app-http1',
-  standalone: true,
-  imports: [AsyncPipe, JsonPipe],
-  templateUrl: './http1.component.html',
-  styleUrl: './http1.component.scss'
+    selector: 'app-http1',
+    imports: [AsyncPipe, JsonPipe],
+    templateUrl: './http1.component.html',
+    styleUrl: './http1.component.scss'
 })
 export class Http1Component {
 

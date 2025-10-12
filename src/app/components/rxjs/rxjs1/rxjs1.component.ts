@@ -4,11 +4,10 @@ import { ToArrayPipe } from "../../../pipes/to-array-async.pipe"
 import { AsyncPipe } from '@angular/common'
 
 @Component({
-  selector: 'app-rxjs1',
-  standalone: true,
-  imports: [ToArrayPipe, AsyncPipe],
-  templateUrl: './rxjs1.component.html',
-  styleUrl: './rxjs1.component.scss'
+    selector: 'app-rxjs1',
+    imports: [ToArrayPipe, AsyncPipe],
+    templateUrl: './rxjs1.component.html',
+    styleUrl: './rxjs1.component.scss'
 })
 export class Rxjs1Component {
   private source$ = range(1, 20)

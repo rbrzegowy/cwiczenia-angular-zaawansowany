@@ -4,11 +4,10 @@ import { AsyncPipe } from '@angular/common'
 import { of } from 'rxjs'
 
 @Component({
-  selector: 'app-rxjs5',
-  standalone: true,
-  imports: [ToArrayPipe, AsyncPipe],
-  templateUrl: './rxjs5.component.html',
-  styleUrl: './rxjs5.component.scss'
+    selector: 'app-rxjs5',
+    imports: [ToArrayPipe, AsyncPipe],
+    templateUrl: './rxjs5.component.html',
+    styleUrl: './rxjs5.component.scss'
 })
 export class Rxjs5Component {
   @ViewChild('searchBox', { read: ElementRef }) private searchBox: ElementRef<HTMLInputElement> | undefined
