@@ -1,0 +1,19 @@
+<h2>Reactive Forms - rejestracja użytkownika</h2>
+<p>
+  Stwórz formularz rejestracyjny użytkownika. Formularz powinien zostać
+  podzielony na sekcje: dane osobowe oraz dane adresowe.<br />
+  Wykorzystaj komponenty <strong>UserRegisterFormStep1</strong> oraz
+  <strong>UserRegisterFormStep2</strong>
+</p>
+<p>
+  Kolejne kroki formularza powinny pracować pod adresami:
+  <a class="primary" routerLink="userRegister1">Krok 1</a> oraz
+  <a class="primary" routerLink="userRegister2">Krok 2</a>
+</p>
+<section>
+  <router-outlet></router-outlet>
+</section>
+<section>
+  <h3>Dane z formularza</h3>
+  <pre>{{ userForm.valueChanges | async | json }}</pre>
+</section>

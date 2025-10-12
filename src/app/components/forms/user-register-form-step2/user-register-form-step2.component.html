@@ -1,0 +1,28 @@
+<h2>Rejestracja użytkownika - krok 2</h2>
+<form [formGroup]="form">
+  <div>
+    <label for="street">Ulica, nr domu:</label>
+    <input id="street" type="text" formControlName="street" />
+    @if(form.get('street')?.touched && form.get('street')?.invalid) {
+    <div>Ulica jest wymagana.</div>
+    }
+  </div>
+
+  <div>
+    <label for="city">Miasto:</label>
+    <input id="city" type="text" formControlName="city" />
+    @if(form.get('city')?.touched && form.get('city')?.invalid) {
+    <div>Miasto jest wymagane.</div>
+    }
+  </div>
+
+  <div>
+    <label for="postalCode">Kod pocztowy:</label>
+    <input id="postalCode" type="text" formControlName="postalCode" />
+    @if(form.get('postalCode')?.touched && form.get('postalCode')?.invalid) {
+    <div>Kod pocztowy jest wymagany.</div>
+    }
+  </div>
+
+  <button type="submit" [disabled]="form.invalid">Zarejestruj</button>
+</form>

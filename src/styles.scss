@@ -6,6 +6,7 @@
   --card-shadow: 7px 4px 15px 0px #a5a5a56b;
   --selected-nav-link: #e0aaa8;
   --header-color: #7079ab;
+  --link-highlighted-color: #7079ab;
 }
 
 body {
@@ -20,6 +21,11 @@ body {
 a {
   text-decoration: none;
   color: inherit;
+
+  &.primary {
+    color: var(--link-highlighted-color);
+    border-bottom: dashed 1px var(--link-highlighted-color);
+  }
 }
 
 button {

@@ -9,6 +9,9 @@ import { Routing1Component } from './components/routing/routing1/routing1.compon
 import { Forms1Component } from './components/forms/forms1/forms1.component'
 import { Http1Component } from './components/http/http1/http1.component'
 import { Routing2Component } from './components/routing/routing2/routing2.component'
+import { Forms2Component } from './components/forms/forms2/forms2.component'
+import { UserRegisterFormStep1Component } from './components/forms/user-register-form-step1/user-register-form-step1.component'
+import { UserRegisterFormStep2Component } from './components/forms/user-register-form-step2/user-register-form-step2.component'
 
 export const routes: Routes = [
   { path: '', component: HomeComponent },
@@ -20,5 +23,12 @@ export const routes: Routes = [
   { path: 'routing1', component: Routing1Component },
   { path: 'routing2', component: Routing2Component },
   { path: 'forms1', component: Forms1Component },
+  {
+    path: 'forms2', component: Forms2Component,
+    children: [
+      { path: 'userRegister1', component: UserRegisterFormStep1Component },
+      { path: 'userRegister2', component: UserRegisterFormStep2Component },
+    ]
+  },
   { path: 'http1', component: Http1Component },
 ]

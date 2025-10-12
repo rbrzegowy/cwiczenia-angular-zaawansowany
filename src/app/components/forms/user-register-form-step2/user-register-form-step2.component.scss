@@ -1,0 +1,16 @@
+form {
+  display: grid;
+  gap: 10px;
+
+  div {
+    display: flex;
+    flex-direction: row;
+    gap: 15px;
+    align-items: center;
+
+    label {
+      width: 150px;
+      text-align: right;
+    }
+  }
+}

@@ -1,0 +1,28 @@
+<h2>Rejestracja użytkownika - krok 1</h2>
+<form [formGroup]="form">
+  <div>
+    <label for="firstName">Imię:</label>
+    <input id="firstName" type="text" formControlName="firstName" />
+    @if(form.get('firstName')?.touched && form.get('firstName')?.invalid) {
+    <div>Imię jest wymagane.</div>
+    }
+  </div>
+
+  <div>
+    <label for="lastName">Nazwisko:</label>
+    <input id="lastName" type="text" formControlName="lastName" />
+    @if(form.get('lastName')?.touched && form.get('lastName')?.invalid) {
+    <div>Nazwisko jest wymagane.</div>
+    }
+  </div>
+
+  <div>
+    <label for="email">Email:</label>
+    <input id="email" type="email" formControlName="email" />
+    @if(form.get('email')?.touched && form.get('email')?.invalid) {
+    <div>Email jest wymagany.</div>
+    }
+  </div>
+
+  <button type="submit" [disabled]="form.invalid">Dalej</button>
+</form>
