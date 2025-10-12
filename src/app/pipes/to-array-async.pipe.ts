@@ -7,9 +7,10 @@ import { map, Observable, scan } from 'rxjs'
 })
 export class ToArrayPipe implements PipeTransform {
 
-  transform(value: Observable<unknown>, showOnlyLatest = 0): Observable<unknown> {
+  transform<T extends any>(value: Observable<T>, showOnlyLatest = 0): Observable<(T | string)[]> | null {
+    if (!value) { return null }
     const accumulated = value.pipe(
-      scan((acc, curr) => [...acc, curr], [] as unknown[]),
+      scan((acc, curr) => [...acc, curr], [] as (T | string)[]),
       map(arr => {
         if (showOnlyLatest === 0 || arr.length <= showOnlyLatest) {
           return arr
