@@ -1,5 +1,6 @@
-import { HttpClient } from '@angular/common/http'
-import { inject, Injectable } from '@angular/core'
+import { HttpClient, httpResource } from '@angular/common/http'
+import { inject, Injectable, Signal } from '@angular/core'
+import { JSONPlaceholderAlbum } from '../models/json-placeholder.models'
 
 @Injectable({
   providedIn: 'root'
@@ -14,5 +15,8 @@ export class JsonPlaceholderApiService {
   }
   getComments(postId: number) {
     return this.httpClient.get(`${this.apiUrl}/posts/${postId}/comments`)
+  }
+  getAlbumPhotosResource(id: Signal<number | undefined>) {
+    return httpResource<JSONPlaceholderAlbum[]>(() => id() ? `${this.apiUrl}/albums/${id()}/photos` : undefined)
   }
 }

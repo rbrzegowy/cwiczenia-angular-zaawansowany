@@ -1,0 +1,29 @@
+<h2>Progressive Web App</h2>
+<p>
+  Zaimplementuj PWA w aplikacji. <br />
+  Zweryfikuj działanie service workera oraz możliwość instalacji aplikacji
+  PWA.<br />
+  Skonfiguj w <code>ngsw-config.json</code> cache dla
+  <code>https://jsonplaceholder.typicode.com/albums/*/photos</code>
+</p>
+<p>Wykorzystaj pakiet <code>@angular/pwa</code>.</p>
+<p>
+  Działanie sprawdź w trybie produkcyjnym - build lub
+  <code> ng s --configuration=production </code>
+</p>
+<h2>Albumy z JSONPlaceholder</h2>
+<div class="form">
+  <label for="id">Podaj id albumu (1-99):</label>
+  <input type="number" id="id" #idInput />
+  <button (click)="getAlbum(+idInput.value)">Pobierz album</button>
+</div>
+@if (albumRes.hasValue()) {
+  <section class="album">
+    @for (photo of albumRes.value(); track photo.id) {
+      <div>
+        <img [src]="photo.thumbnailUrl" [alt]="photo.title" />
+        <p>{{ photo.title }}</p>
+      </div>
+    }
+  </section>
+}

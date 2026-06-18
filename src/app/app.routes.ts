@@ -12,6 +12,7 @@ import { Routing2Component } from './components/routing/routing2/routing2.compon
 import { Forms2Component } from './components/forms/forms2/forms2.component'
 import { UserRegisterFormStep1Component } from './components/forms/user-register-form-step1/user-register-form-step1.component'
 import { UserRegisterFormStep2Component } from './components/forms/user-register-form-step2/user-register-form-step2.component'
+import { PwaComponent } from './components/pwa/pwa.component'
 
 export const routes: Routes = [
   { path: '', component: HomeComponent },
@@ -31,4 +32,5 @@ export const routes: Routes = [
     ]
   },
   { path: 'http1', component: Http1Component },
+  { path: 'pwa', component: PwaComponent },
 ]
