@@ -13,6 +13,8 @@ import { Forms2Component } from './components/forms/forms2/forms2.component'
 import { UserRegisterFormStep1Component } from './components/forms/user-register-form-step1/user-register-form-step1.component'
 import { UserRegisterFormStep2Component } from './components/forms/user-register-form-step2/user-register-form-step2.component'
 import { PwaComponent } from './components/pwa/pwa.component'
+import { DirectivesComponent } from './components/directives/directives.component'
+import { DiComponent } from './components/di/di.component'
 
 export const routes: Routes = [
   { path: '', component: HomeComponent },
@@ -33,4 +35,6 @@ export const routes: Routes = [
   },
   { path: 'http1', component: Http1Component },
   { path: 'pwa', component: PwaComponent },
+  { path: 'directives', component: DirectivesComponent },
+  { path: 'di', component: DiComponent },
 ]

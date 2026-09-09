@@ -1,0 +1,24 @@
+.spinner {
+  width: 18px;
+  height: 18px;
+  border: 2px solid currentColor;
+  border-top-color: transparent;
+  border-radius: 50%;
+  animation: spinner-rotate 0.7s linear infinite;
+  display: inline-block;
+  vertical-align: middle;
+  box-sizing: border-box;
+  margin-right: 10px;
+
+  &.large {
+    width: 28px;
+    height: 28px;
+    border-width: 3px;
+  }
+}
+
+@keyframes spinner-rotate {
+  to {
+    transform: rotate(360deg);
+  }
+}

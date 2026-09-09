@@ -1,0 +1,113 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Loading Spinner</title>
+
+    <style>
+      /* =========================
+       Spinner
+       ========================= */
+
+      .spinner {
+        width: 18px;
+        height: 18px;
+        border: 2px solid currentColor;
+        border-top-color: transparent;
+        border-radius: 50%;
+        animation: spinner-rotate 0.7s linear infinite;
+        display: inline-block;
+        vertical-align: middle;
+        box-sizing: border-box;
+      }
+
+      @keyframes spinner-rotate {
+        to {
+          transform: rotate(360deg);
+        }
+      }
+
+      /* =========================
+       Button
+       ========================= */
+
+      .button {
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+        gap: 8px;
+
+        padding: 10px 18px;
+        border: 0;
+        border-radius: 8px;
+
+        background: #2563eb;
+        color: white;
+        font:
+          500 14px system-ui,
+          sans-serif;
+
+        cursor: pointer;
+        transition: background 0.15s ease;
+      }
+
+      .button:hover {
+        background: #1d4ed8;
+      }
+
+      .button:disabled {
+        cursor: default;
+        opacity: 0.7;
+      }
+
+      /* =========================
+       Loading container
+       ========================= */
+
+      .loading {
+        display: inline-flex;
+        align-items: center;
+        gap: 10px;
+
+        padding: 12px 16px;
+        border-radius: 8px;
+
+        background: #f5f5f5;
+        color: #555;
+
+        font:
+          14px system-ui,
+          sans-serif;
+      }
+
+      /* Optional: larger spinner */
+
+      .spinner.large {
+        width: 28px;
+        height: 28px;
+        border-width: 3px;
+      }
+    </style>
+  </head>
+
+  <body>
+    <!-- Spinner inside a button -->
+    <button class="button" disabled>
+      <span class="spinner"></span>
+      Processing...
+    </button>
+
+    <!-- Standalone loading indicator -->
+    <div class="loading">
+      <span class="spinner"></span>
+      Loading data...
+    </div>
+
+    <!-- Larger standalone spinner -->
+    <div class="loading">
+      <span class="spinner large"></span>
+      Please wait...
+    </div>
+  </body>
+</html>

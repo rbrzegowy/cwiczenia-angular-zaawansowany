@@ -1,0 +1,25 @@
+<h2>Dyrektywy strukturalne</h2>
+<p>Utwórz dyrektywę strukturalną <code>*showState</code></p>
+<p>
+  Dyrektywa może być przypisana do znaczników <code>&lt;div&gt;</code> i
+  <code>&lt;button&gt;</code>.
+</p>
+<p>
+  Rolą dyrektywy wyświetlenie animacji z klasy <code>.spinner</code> jeśli
+  wartość inputa showState="pending"
+</p>
+<p>
+  BONUS: Zaimplementuj wersję large spinnera (skorzystaj z klasy .large) <br />
+  BONUS2: Zaimplementuj pokazanie ikony (np. emoji) dla showState="error" <br />
+  BONUS3: Zablokuj button (disable) i "wyszarz" div dla showState="disabled"
+</p>
+<p>
+  Przykład działania:
+  <button><span class="spinner"></span> Trwa ładowanie</button>
+</p>
+<p>
+  <button (click)="onGetPostClick()">Pobierz post</button>
+</p>
+<div>
+  <pre>Pobrany post: {{ post | async | json }}</pre>
+</div>
